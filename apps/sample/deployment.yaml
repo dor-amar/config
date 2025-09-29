@@ -15,7 +15,7 @@ spec:
         app: sample
     spec:
       containers:
-      - name: sample
-        image: doramar97/argo-app:latest
-        ports:
-        - containerPort: 5000
+        - name: sample
+          image: doramar97/argo-app:e73ec2ea40c4e6fe719815f66c90860e113f80b3
+          ports:
+            - containerPort: 5000
