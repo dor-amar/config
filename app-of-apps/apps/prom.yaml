@@ -9,6 +9,9 @@ spec:
     repoURL: https://github.com/prometheus-community/helm-charts.git
     targetRevision: main
     path: charts/prometheus
+    helm:
+      valueFiles:
+         - values-production.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: default
