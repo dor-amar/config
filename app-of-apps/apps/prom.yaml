@@ -6,9 +6,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/prometheus-community.git
+    repoURL: https://github.com/prometheus-community/helm-charts.git
     targetRevision: main
-    path: helm-charts/charts/prometheus
+    path: charts/prometheus
   destination:
     server: https://kubernetes.default.svc
     namespace: default
