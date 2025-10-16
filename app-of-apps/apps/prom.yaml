@@ -11,7 +11,7 @@ spec:
     path: charts/prometheus
     helm:
       valueFiles:
-         - ./values-production.yaml
+         - ../configurations/prom-values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: default
