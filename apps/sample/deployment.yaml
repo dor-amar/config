@@ -5,7 +5,7 @@ metadata:
   labels:
     app: sample
 spec:
-  replicas: 3
+  replicas: 5
   selector:
     matchLabels:
       app: sample
@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: sample
-          image: doramar97/argo-app:e7f156028e7c462f4479e25710f0389ae209f6ed
+          image: doramar97/argo-app:not-exist
           ports:
             - containerPort: 5000
