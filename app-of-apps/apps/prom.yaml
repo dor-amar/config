@@ -10,8 +10,9 @@ spec:
     targetRevision: main
     path: charts/prometheus
     helm:
-      valueFiles:
-         - ../configurations/prom-values.yaml
+      values: |
+        ingress:
+          enabled: true
   destination:
     server: https://kubernetes.default.svc
     namespace: default
