@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: nextflix
-          image: doramar97/nextflix-int:613d90db24e97671418cd40980672e7734ce1276
+          image: doramar97/nextflix-int:bef68ebf76d49076276fb2dfe3c39676979c00a0
           ports:
             - containerPort: 3000
