@@ -6,15 +6,12 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/<you>/config-repo.git
+    repoURL: https://github.com/dor-amar/config.git
     targetRevision: main
-    path: apps/sample-web
-    helm:
-      valueFiles:
-        - values.yaml
+    path: netflix/app
   destination:
     server: https://kubernetes.default.svc
-    namespace: sample-web
+    namespace: nextflix
   syncPolicy:
     automated:
       prune: true
