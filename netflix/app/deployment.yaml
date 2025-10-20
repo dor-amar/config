@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nextflix
+  labels:
+    app: nextflix
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nextflix
+  template:
+    metadata:
+      labels:
+        app: nextflix
+    spec:
+      containers:
+      - name: nextflix
+        image: doramar97/nextflix-int:8555546da774d1a29d543875f262da032b35513f 
+        ports:
+        - containerPort: 3000

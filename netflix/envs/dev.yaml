@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: sample-web
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/<you>/config-repo.git
+    targetRevision: main
+    path: apps/sample-web
+    helm:
+      valueFiles:
+        - values.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: sample-web
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
